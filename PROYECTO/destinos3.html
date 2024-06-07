@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Declaración del tipo de documento y lenguaje principal -->
+  <meta charset="UTF-8">
+  <!-- Metadato para asegurar que el ancho de la página se ajuste al dispositivo -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título de la página -->
+  <title>Mis viajes</title>
+  <!-- Enlace a la hoja de estilos externa -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <!-- Imagen del logo de la empresa -->
+  <img src="./Img/logo.png" alt="Logo de la empresa">
+  <!-- Título principal de la página -->
+  <h1>Mis viajes</h1>
+  <!-- Formulario de búsqueda -->
+  <form id="searchForm" action="#" method="get">
+    <!-- Campo de entrada para la búsqueda -->
+    <input type="search" name="search" id="search" placeholder="Buscar...">
+    <!-- Botón para enviar el formulario -->
+    <button type="submit">Buscar</button>
+  </form>
+</header>
+
+<main>
+  <!-- Contenedor principal de las ubicaciones -->
+  <div class="container">
+    <!-- Primera ubicación -->
+    <div class="location" id="location1">
+      <ul>
+        <!-- Título de la ubicación -->
+        <h2>Holiday Inn Express Madrid Airport, an IHG Hotel</h2>
+      </ul>
+      <!-- Dirección de la ubicación -->
+      <li> Avenida de Aragón, 402, Ciudad Pegaso, Madrid, Madrid, 28022</li>
+    </div>
+    <!-- Segunda ubicación -->
+    <div class="location" id="location2">
+      <ul>
+        <!-- Título de la ubicación -->
+        <h2>Papaya Playa Project</h2>
+      </ul>
+      <!-- Dirección de la ubicación -->
+      <li> Km 4.5 Carretera Tulum-Boca Paila, Tulum, QROO, 77780</li>
+    </div>
+    <!-- Tercera ubicación -->
+    <div class="location" id="location3">
+      <ul>
+        <!-- Título de la ubicación -->
+        <h2>Bungalows Casa Blanca</h2>
+      </ul>
+      <!-- Dirección de la ubicación -->
+      <li> Avenida de Aragón, 402, Ciudad Pegaso, Madrid, Madrid, 28022</li>
+    </div>
+  </div>
+  <!-- Imagen de un avión -->
+  <img width="50" height="50" src="./Img/avion.gif" alt="">
+</main>
+
+<footer>
+  <!-- Pie de página con derechos de autor -->
+  <p>Derechos reservados &copy; 2024 Guía de Destinos</p>
+</footer>
+
+<!-- Script para añadir funcionalidad de búsqueda -->
+<script>
+  // Obtener el formulario de búsqueda
+  const searchForm = document.getElementById('searchForm');
+  // Obtener todas las ubicaciones
+  const locations = document.querySelectorAll('.location');
+
+  // Añadir un evento al formulario para manejar el envío
+  searchForm.addEventListener('submit', function(event) {
+    // Evitar el envío del formulario
+    event.preventDefault();
+
+    // Obtener el término de búsqueda y convertirlo a minúsculas
+    const searchTerm = document.getElementById('search').value.trim().toLowerCase();
+
+    // Recorrer todas las ubicaciones
+    locations.forEach(location => {
+      // Obtener el contenido de la ubicación y convertirlo a minúsculas
+      const locationContent = location.textContent.trim().toLowerCase();
+      // Verificar si el contenido incluye el término de búsqueda
+      if (locationContent.includes(searchTerm)) {
+        // Si lo incluye, mostrar la ubicación
+        location.classList.remove('hidden');
+      } else {
+        // Si no lo incluye, ocultar la ubicación
+        location.classList.add('hidden');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
+
+
+

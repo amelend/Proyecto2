@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Estilos CSS */
+    .faq-item {
+      margin-bottom: 20px;
+    }
+    .question {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .answer {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <a href="">
+            <img width="300" height="200" src="Img/logo.png" alt="">
+        </a>
+    </header>
+
+<div class="container">
+  <h2>Preguntas Frecuentes</h2>
+
+  <div class="faq-item">
+    <div class="question">¿Cómo cambio mi reserva de planes?</div>
+    <div class="answer">Puedes cambiar tu reserva de planes contactando a nuestro equipo de atención al cliente. Ellos estarán encantados de ayudarte a encontrar una solución adecuada.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">¿Cómo puedo rentar un auto?</div>
+    <div class="answer">Para rentar un auto, puedes utilizar nuestro servicio de alquiler de autos en línea. Solo necesitas ingresar tus detalles de viaje y seleccionar el auto que mejor se adapte a tus necesidades.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">¿Qué actividades puedo realizar en mi destino?</div>
+    <div class="answer">Hay una amplia variedad de actividades que puedes realizar en tu destino, como tours guiados, deportes acuáticos, excursiones culturales y mucho más. Te recomendamos explorar nuestras guías de destinos para obtener más información sobre las actividades disponibles.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">¿Cómo puedo cancelar mi viaje?</div>
+    <div class="answer">Puedes cancelar tu viaje comunicándote con nuestro equipo de soporte. Ten en cuenta que pueden aplicarse cargos por cancelación, dependiendo de la política de cancelación de tu reserva.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">¿Cómo registro a todas las personas del viaje?</div>
+    <div class="answer">Para registrar a todas las personas que viajarán contigo, simplemente proporciona sus detalles al hacer la reserva. Asegúrate de incluir la información correcta de cada pasajero para evitar problemas durante el viaje.</div>
+  </div>
+
+</div>
+
+<script>
+  // JavaScript para mostrar/ocultar respuestas
+  const questions = document.querySelectorAll('.question');
+
+  questions.forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+<footer>
+  <p>Derechos de autor © 2024 - Guía de Destinos</p>
+</footer>
+</body>
+</html>

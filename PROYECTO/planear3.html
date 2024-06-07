@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuestas de Planes</title>
+  <!-- Incluir las bibliotecas jQuery y jQuery UI -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+<header>
+  <a href="">
+    <img src="./Img/logo.png" alt="Logo">
+  </a>
+  <h1>Planificador</h1>
+</header>
+
+<main>
+  <form id="planForm" onsubmit="return validarForm()">
+    <label for="plan">Nombre:</label>
+    <input type="text" id="plan" name="plan" placeholder="Ingrese tu nombre...">
+
+    <label for="budget">Presupuesto Destinado:</label>
+    <input type="number" id="budget" name="budget" placeholder="Ingrese su presupuesto...">
+
+    <label for="climate">Clima:</label>
+    <select id="climate" name="climate">
+      <option value="elegir">Elegir...</option>
+      <option value="soleado">Soleado</option>
+      <option value="nublado">Nublado</option>
+      <option value="lluvioso">Lluvioso</option>
+      <option value="nevado">Nevado</option>
+    </select>
+
+    <label for="date">Elegir Fecha:</label>
+    <div style="position: relative;">
+      <input type="text" id="datepicker" name="date" placeholder="Seleccione una fecha...">
+      <img width="30" height="30" src="./Img/calendar.png" alt="Calendario" style="position: absolute; right: 5px; top: 30%; transform: translateY(-50%); cursor: pointer;">
+    </div>
+    <div>
+      <button type="submit">Buscar Plan</button>
+    </div>
+  </form>
+</main>
+
+<footer>
+  <p>Derechos de autor © 2024 - Guía de Destinos</p>
+</footer>
+
+<script>
+  // Inicializar el DatePicker al hacer clic en el campo de fecha
+  $(function() {
+    $("#datepicker").datepicker({
+      minDate: 0 // Establecer la fecha mínima como hoy (no se permiten fechas pasadas)
+    });
+
+    $("#datepicker").next("img").click(function() {
+      $("#datepicker").focus();
+    });
+  });
+
+  function validarForm() {
+    var nombre = document.getElementById("plan").value.trim();
+    var presupuesto = document.getElementById("budget").value.trim();
+    var clima = document.getElementById("climate").value;
+    var fecha = document.getElementById("datepicker").value.trim();
+    var valid = true;
+
+    // Restablecer estilos de error
+    document.getElementById("plan").style.borderColor = "";
+    document.getElementById("budget").style.borderColor = "";
+    document.getElementById("climate").style.borderColor = "";
+    document.getElementById("datepicker").style.borderColor = "";
+
+    // Validar el campo de nombre
+    if (nombre === "" || nombre.length <= 5) {
+      alert("Por favor, ingrese un nombre válido (más de 5 letras).");
+      document.getElementById("plan").style.borderColor = "red";
+      valid = false;
+    }
+
+    // Validar el campo de presupuesto (debe ser un número positivo mayor a 1000)
+    if (presupuesto === "" || isNaN(presupuesto) || Number(presupuesto) <= 30) {
+      alert("Por favor, ingrese un presupuesto válido (mayor a 30 dólares).");
+      document.getElementById("budget").style.borderColor = "red";
+      valid = false;
+    }
+
+    // Validar el campo de clima
+    if (clima === "elegir") {
+      alert("Por favor, seleccione un clima.");
+      document.getElementById("climate").style.borderColor = "red";
+      valid = false;
+    }
+
+    // Validar el campo de fecha (no vacío y formato correcto)
+    if (fecha === "") {
+      alert("Por favor, seleccione una fecha.");
+      document.getElementById("datepicker").style.borderColor = "red";
+      valid = false;
+    }
+
+    // Si todos los campos son válidos, mostrar alerta de formulario enviado y redirigir a la siguiente página
+    if (valid) {
+      alert("Formulario enviado con éxito.");
+      window.location.href = "Propuestas.html"; // Cambiar "pagina_siguiente.html" por la URL de tu siguiente página
+      return false; // Evitar el envío del formulario
+    }
+
+    return false; // Evitar el envío del formulario si hay errores
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
+

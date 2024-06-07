@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Destinos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <!-- Logo de la página -->
+        <a href="">
+            <img src="Img/logo.png" alt="">
+        </a>
+        <!-- Contenedor de búsqueda con un campo de entrada y un botón -->
+        <div class="search-container">
+            <input type="text" id="searchInput" onkeyup="search()" placeholder="Buscar...">
+            <button onclick="search()">Buscar</button>
+        </div>
+    </header>
+   
+    <nav>
+        <!-- Navegación principal con enlaces a diferentes secciones del sitio -->
+        <a href="./destinos.html">Destino
+            <img width="50" height="50" src="Img/destino.png" alt="">       
+        </a>
+        <a href="./planear3.html">Planifica
+            <img width="50" height="50" src="Img/planificador.png" alt="">
+        </a>
+        <a href="./reseñas.html">Reseñas
+            <img width="50" height="50" src="Img/buena-resena.png" alt="">
+        </a>
+        <a href="./foro.html">Foros
+            <img width="50" height="50" src="Img/conversacion.png" alt="">
+        </a>
+        <a href="./Contacto.html">Contacto
+            <img width="50" height="50" src="Img/usuario.png" alt="">
+        </a>
+    </nav>
+  
+    <main>
+        <!-- Contenedor principal de contenido -->
+        <div class="container">
+            <div class="destacado">
+                <h2>Descubre los hospedajes más buscados</h2>
+                <p>¡Bienvenido a nuestra guía de destinos! Aquí encontrarás los hospedajes más populares para tu próximo viaje.</p>
+
+                <!-- Enlaces a diferentes destinos con imágenes -->
+                <div class="card">
+                    <a href="https://www.expedia.com/Hotel-Search?adults=2&destination=Costa%20Careyes%2C%20Jalisco%2C%20M%C3%A9xico&endDate=2024-04-27&regionId=601718&semdtl=&sort=RECOMMENDED&startDate=2024-04-26&theme=&useRewards=false&userIntent=">
+                        COSTA CAREYES <img width="200" height="200" src="Img/CostaCareyes.png" alt="">       
+                    </a>
+                </div>
+              
+                <div class="card">
+                    <a href="https://www.expedia.mx/Hotel-Search?adults=2&destination=Nuevo%20Vallarta%2C%20Nayarit%2C%20M%C3%A9xico&endDate=2024-04-27&regionId=500691&semdtl=&sort=RECOMMENDED&startDate=2024-04-26&theme=&useRewards=false&userIntent=">
+                        NUEVO VALLARTA<img width="200" height="200" src="Img/NuevoVallarta.png" alt="">
+                    </a>
+                </div>
+             
+                <div class="card">
+                    <a href="https://www.expedia.mx/Hotel-Search?adults=2&destination=Canc%C3%BAn%2C%20Quintana%20Roo%2C%20M%C3%A9xico&endDate=2024-04-27&regionId=179995&semdtl=&sort=RECOMMENDED&startDate=2024-04-26&theme=&useRewards=false&userIntent=">
+                        CANCÚN <img width="200" height="200" src="Img/Cancun.png" alt="">
+                    </a>
+                </div>
+            
+                <div class="card">
+                    <a href="https://www.expedia.mx/Hotel-Search?adults=2&destination=Mazatl%C3%A1n%2C%20Sinaloa%2C%20M%C3%A9xico&endDate=2024-04-27&regionId=180011&semdtl=&sort=RECOMMENDED&startDate=2024-04-26&theme=&useRewards=false&userIntent=">
+                        MAZATLÁN <img width="200" height="200" src="Img/Mazatlan.png" alt="">
+                    </a>
+                </div>
+           
+                <!-- Comentar un enlace a Madrid -->
+                <!-- <div class="card">
+                    <a href="https://www.expedia.mx/Hotel-Search?startDate=2024-04-26&endDate=2024-04-27&regionId=2198&adults=2">
+                        MADRID <img width="200" height="200" src="Img/Madrid.png" alt="">
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </main>
+   
+    <footer>
+        <!-- Pie de página con derechos de autor -->
+        <p>Derechos de autor © 2024 - Guía de Destinos</p>
+    </footer>
+    
+    <script>
+        function search() {
+            var input, filter, container, a, p, i, txtValue;
+
+            // Obtener el valor de búsqueda del campo de entrada
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            
+            // Seleccionar el contenedor principal y todos los enlaces y párrafos dentro de él
+            container = document.querySelector(".container");
+            a = container.getElementsByTagName("a");
+            p = container.getElementsByTagName("p");
+            
+            // Eliminar resaltados anteriores
+            for (i = 0; i < a.length; i++) {
+                a[i].innerHTML = a[i].innerHTML.replace(/<span class="highlight">/g, "").replace(/<\/span>/g, "");
+            }
+            for (i = 0; i < p.length; i++) {
+                p[i].innerHTML = p[i].innerHTML.replace(/<span class="highlight">/g, "").replace(/<\/span>/g, "");
+            }
+            
+            // Filtrar y resaltar los enlaces que coinciden con la búsqueda
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    var innerHTML = a[i].innerHTML;
+                    var index = innerHTML.toUpperCase().indexOf(filter);
+                    if (index >= 0) { 
+                        innerHTML = innerHTML.substring(0, index) + "<span class='highlight'>" + innerHTML.substring(index, index+filter.length) + "</span>" + innerHTML.substring(index + filter.length);
+                        a[i].innerHTML = innerHTML;
+                    }
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+
+            // Filtrar y resaltar los párrafos que coinciden con la búsqueda
+            for (i = 0; i < p.length; i++) {
+                txtValue = p[i].textContent || p[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    var innerHTML = p[i].innerHTML;
+                    var index = innerHTML.toUpperCase().indexOf(filter);
+                    if (index >= 0) { 
+                        innerHTML = innerHTML.substring(0, index) + "<span class='highlight'>" + innerHTML.substring(index, index+filter.length) + "</span>" + innerHTML.substring(index + filter.length);
+                        p[i].innerHTML = innerHTML;
+                    }
+                    p[i].style.display = "";
+                } else {
+                    p[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+

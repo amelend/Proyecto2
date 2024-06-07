@@ -1,0 +1,1299 @@
+    /*estilo para la pagina inicio*/
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6f3f3;
+    }
+    header {
+      background-color: #d7b2d2;
+      color: #0b0b0b;
+      text-align:center;
+     /* display: flex;*/
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px; /* Ajustar el espacio alrededor de las imágenes */
+    
+    }
+    
+    header img {
+      width: 300px; /* Ajusta el ancho según el tamaño de tu logo */
+      height: auto; /* Esto mantiene la proporción del logo */
+    }
+    
+    nav {
+      background-color: #feeaf5;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #090909;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      text-decoration:none;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+  
+  nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+  }
+  
+  nav ul li a {
+      color: #0b0b0b;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+      color: #ff00bf; /* Color de resaltado al pasar el cursor */
+  }
+    main {
+    text-align: center end justify;
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;  
+    }
+    .faq-item {
+      margin-bottom: 20px;
+    }
+    .question {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .answer {
+      display: none;
+      margin-top: 10px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .stars-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .destacado {
+      background-color: #fff;
+      border: 1px solid #0c0c0c;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .destacado h2 {
+      color: #333;
+    }
+    .location {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    /*ESTILO reseña*/                       
+    
+    .place {
+      margin-bottom: 20px;
+    }
+    
+    .rating {
+      margin-bottom: 10px;
+    }
+    
+    .star {
+      font-size: 24px;
+      cursor: pointer;
+      color: rgb(42, 205, 61);
+    }
+    
+    .star.selected {
+      color: gold;
+    }
+    
+    .comment {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    
+    .submit {
+      padding: 5px 10px;
+      background-color: #ed9bf3;
+      color: #0b0a0a;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .comment-list div {
+      margin-bottom: 5px;
+    }
+/*reseña*/
+.place
+{
+ color: #070707;
+}
+
+    /* Estilos de ejemplo para ocultar elementos */
+    .hidden {
+      display: none;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+     
+    /* Estilos básicos para la barra de búsqueda */
+    .search-container {
+      margin-bottom: 20px;
+      text-align: right;
+    }
+    .search-container input[type=text] {
+      padding: 10px;
+      width: 300px;
+      border-radius: 5px;
+      border: 1px solid #999898;
+      font-size: 16px;
+    }
+    .search-container button {
+      padding: 10px 20px;
+      background-color: #f8b7e0;
+      color: rgb(2, 2, 2);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .search-container button:hover {
+      background-color: #6e9dcc;
+    }
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background-color: #f574e8;
+      color: rgb(12, 12, 12);
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #e889f0;
+    }
+
+/* estilo para la pagina de destinos*/
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-info {
+  width: 50%; /* Ajustar según sea necesario */
+}
+/*funcionalidad extra de opacidad y transicion en imagenes*/
+.contact-info img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.contact-info img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+.contact-image {
+  width: 50%; /* Ajustar según sea necesario */
+  text-align: right;
+}
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+}
+ /* Estilos para el botón */
+main button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #fa92e5;
+  background-color: #fdb7f2;
+  color: rgb(7, 7, 7);
+  margin: 10px 0;
+  display: block;
+  width: auto;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para cuando el botón se encuentra en estado hover (sobre) */
+main button:hover {
+  background-color: #fad4f2;
+  color: #050505;
+}
+
+/* Estilo para cuando el botón se encuentra en estado activo (presionado) */
+main button:active {
+  background-color: #222;
+}
+
+/*ESTILO PARA PONER EN TARJETAS EL INDEX*/
+
+.card {
+  display: inline-block;
+  width: 250px; /* Ancho deseado para cada tarjeta */
+  margin: 10px; /* Margen entre las tarjetas */
+  border: 1px solid #ccc; /* Borde para cada tarjeta */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+  text-align: center; /* Centra el contenido */
+}
+
+.card img {
+  width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+.card p {
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+}
+
+
+/* Clase CSS para resaltar el texto encontrado en la búsqueda */
+.highlight {
+    background-color: rgb(246, 194, 243);
+}
+
+/* Estilo para el formulario de búsqueda */
+#searchForm {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Estilo para el campo de búsqueda */
+#search {
+  padding: 10px;
+  width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Estilo para el botón de búsqueda */
+#searchForm button {
+  padding: 10px 20px;
+  background-color: #fd79e5;
+  color: #0e0d0d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Estilo para el botón de búsqueda al pasar el mouse */
+#searchForm button:hover {
+  background-color: #e8189c;
+}
+
+/* Estilo para ocultar las ubicaciones que no coinciden con la búsqueda */
+.location.hidden {
+  display: none;
+}
+
+/*ESTILO PARA HACER MAS GRANDES LA IMAGEN*/
+.container a img:hover {
+  transform: scale(1.1);
+}
+
+
+@media only screen and (max-width: 600px){
+             /*estilo para la pagina inicio*/
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6f3f3;
+    }
+    header {
+      background-color: #d7b2d2;
+      color: #0b0b0b;
+      text-align:center;
+     /* display: flex;*/
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px; /* Ajustar el espacio alrededor de las imágenes */
+    
+    }
+    
+    header img {
+      width: 300px; /* Ajusta el ancho según el tamaño de tu logo */
+      height: auto; /* Esto mantiene la proporción del logo */
+    }
+    
+    nav {
+      background-color: #feeaf5;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #090909;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      text-decoration:none;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  }
+  
+  nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+  }
+  
+  nav ul li a {
+      color: #0b0b0b;
+      text-decoration: none;
+      transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+      color: #ff00bf; /* Color de resaltado al pasar el cursor */
+  }
+    main {
+    text-align: center end justify;
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;  
+    }
+    .faq-item {
+      margin-bottom: 20px;
+    }
+    .question {
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .answer {
+      display: none;
+      margin-top: 10px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .stars-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .destacado {
+      background-color: #fff;
+      border: 1px solid #0c0c0c;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .destacado h2 {
+      color: #333;
+    }
+    .location {
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    /*ESTILO reseña*/                       
+    
+    .place {
+      margin-bottom: 20px;
+    }
+    
+    .rating {
+      margin-bottom: 10px;
+    }
+    
+    .star {
+      font-size: 24px;
+      cursor: pointer;
+      color: rgb(42, 205, 61);
+    }
+    
+    .star.selected {
+      color: gold;
+    }
+    
+    .comment {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    
+    .submit {
+      padding: 5px 10px;
+      background-color: #ed9bf3;
+      color: #0b0a0a;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .comment-list div {
+      margin-bottom: 5px;
+    }
+/*reseña*/
+.place
+{
+ color: #070707;
+}
+
+    /* Estilos de ejemplo para ocultar elementos */
+    .hidden {
+      display: none;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+     
+    /* Estilos básicos para la barra de búsqueda */
+    .search-container {
+      margin-bottom: 20px;
+      text-align: right;
+    }
+    .search-container input[type=text] {
+      padding: 10px;
+      width: 300px;
+      border-radius: 5px;
+      border: 1px solid #999898;
+      font-size: 16px;
+    }
+    .search-container button {
+      padding: 10px 20px;
+      background-color: #f8b7e0;
+      color: rgb(2, 2, 2);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .search-container button:hover {
+      background-color: #6e9dcc;
+    }
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background-color: #f574e8;
+      color: rgb(12, 12, 12);
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #e889f0;
+    }
+
+/* estilo para la pagina de destinos*/
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-info {
+  width: 50%; /* Ajustar según sea necesario */
+}
+/*funcionalidad extra de opacidad y transicion en imagenes*/
+.contact-info img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.contact-info img:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+.contact-image {
+  width: 50%; /* Ajustar según sea necesario */
+  text-align: right;
+}
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+}
+ /* Estilos para el botón */
+main button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #fa92e5;
+  background-color: #fdb7f2;
+  color: rgb(7, 7, 7);
+  margin: 10px 0;
+  display: block;
+  width: auto;
+  box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para cuando el botón se encuentra en estado hover (sobre) */
+main button:hover {
+  background-color: #fad4f2;
+  color: #050505;
+}
+
+/* Estilo para cuando el botón se encuentra en estado activo (presionado) */
+main button:active {
+  background-color: #222;
+}
+
+/*ESTILO PARA PONER EN TARJETAS EL INDEX*/
+
+.card {
+  display: inline-block;
+  width: 250px; /* Ancho deseado para cada tarjeta */
+  margin: 10px; /* Margen entre las tarjetas */
+  border: 1px solid #ccc; /* Borde para cada tarjeta */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+  text-align: center; /* Centra el contenido */
+}
+
+.card img {
+  width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+.card p {
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+}
+
+
+/* Clase CSS para resaltar el texto encontrado en la búsqueda */
+.highlight {
+    background-color: rgb(246, 194, 243);
+}
+
+/* Estilo para el formulario de búsqueda */
+#searchForm {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Estilo para el campo de búsqueda */
+#search {
+  padding: 10px;
+  width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Estilo para el botón de búsqueda */
+#searchForm button {
+  padding: 10px 20px;
+  background-color: #fd79e5;
+  color: #0e0d0d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Estilo para el botón de búsqueda al pasar el mouse */
+#searchForm button:hover {
+  background-color: #e8189c;
+}
+
+/* Estilo para ocultar las ubicaciones que no coinciden con la búsqueda */
+.location.hidden {
+  display: none;
+}
+
+/*ESTILO PARA HACER MAS GRANDES LA IMAGEN*/
+.container a img:hover {
+  transform: scale(1.1);
+}
+}
+ 
+@media only screen and (max-width: 1200px){
+      /*estilo para la pagina inicio*/
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f6f3f3;
+      }
+      header {
+        background-color: #d7b2d2;
+        color: #0b0b0b;
+        text-align:center;
+       /* display: flex;*/
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px; /* Ajustar el espacio alrededor de las imágenes */
+      
+      }
+      
+      header img {
+        width: 300px; /* Ajusta el ancho según el tamaño de tu logo */
+        height: auto; /* Esto mantiene la proporción del logo */
+      }
+      
+      nav {
+        background-color: #feeaf5;
+        padding: 20px;
+        text-align: center;
+      }
+      nav a {
+        color: #090909;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      nav a:hover {
+        text-decoration:none;
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    
+    nav ul li a {
+        color: #0b0b0b;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        color: #ff00bf; /* Color de resaltado al pasar el cursor */
+    }
+      main {
+      text-align: center end justify;
+        padding: 20px;
+      }
+  
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;  
+      }
+      .faq-item {
+        margin-bottom: 20px;
+      }
+      .question {
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .answer {
+        display: none;
+        margin-top: 10px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .stars-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .destacado {
+        background-color: #fff;
+        border: 1px solid #0c0c0c;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .destacado h2 {
+        color: #333;
+      }
+      .location {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      /*ESTILO reseña*/                       
+      
+      .place {
+        margin-bottom: 20px;
+      }
+      
+      .rating {
+        margin-bottom: 10px;
+      }
+      
+      .star {
+        font-size: 24px;
+        cursor: pointer;
+        color: rgb(42, 205, 61);
+      }
+      
+      .star.selected {
+        color: gold;
+      }
+      
+      .comment {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+      }
+      
+      .submit {
+        padding: 5px 10px;
+        background-color: #ed9bf3;
+        color: #0b0a0a;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .comment-list div {
+        margin-bottom: 5px;
+      }
+  /*reseña*/
+  .place
+  {
+   color: #070707;
+  }
+  
+      /* Estilos de ejemplo para ocultar elementos */
+      .hidden {
+        display: none;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+       
+      /* Estilos básicos para la barra de búsqueda */
+      .search-container {
+        margin-bottom: 20px;
+        text-align: right;
+      }
+      .search-container input[type=text] {
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid #999898;
+        font-size: 16px;
+      }
+      .search-container button {
+        padding: 10px 20px;
+        background-color: #f8b7e0;
+        color: rgb(2, 2, 2);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .search-container button:hover {
+        background-color: #6e9dcc;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        background-color: #f574e8;
+        color: rgb(12, 12, 12);
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #e889f0;
+      }
+  
+  /* estilo para la pagina de destinos*/
+  .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact-info {
+    width: 50%; /* Ajustar según sea necesario */
+  }
+  /*funcionalidad extra de opacidad y transicion en imagenes*/
+  .contact-info img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .contact-info img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  .contact-image {
+    width: 50%; /* Ajustar según sea necesario */
+    text-align: right;
+  }
+  .contact-image img {
+    max-width: 100%;
+    height: auto;
+  }
+   /* Estilos para el botón */
+  main button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #fa92e5;
+    background-color: #fdb7f2;
+    color: rgb(7, 7, 7);
+    margin: 10px 0;
+    display: block;
+    width: auto;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Estilo para cuando el botón se encuentra en estado hover (sobre) */
+  main button:hover {
+    background-color: #fad4f2;
+    color: #050505;
+  }
+  
+  /* Estilo para cuando el botón se encuentra en estado activo (presionado) */
+  main button:active {
+    background-color: #222;
+  }
+  
+  /*ESTILO PARA PONER EN TARJETAS EL INDEX*/
+  
+  .card {
+    display: inline-block;
+    width: 250px; /* Ancho deseado para cada tarjeta */
+    margin: 10px; /* Margen entre las tarjetas */
+    border: 1px solid #ccc; /* Borde para cada tarjeta */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+    text-align: center; /* Centra el contenido */
+  }
+  
+  .card img {
+    width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+  
+  .card p {
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  
+  /* Clase CSS para resaltar el texto encontrado en la búsqueda */
+  .highlight {
+      background-color: rgb(246, 194, 243);
+  }
+  
+  /* Estilo para el formulario de búsqueda */
+  #searchForm {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Estilo para el campo de búsqueda */
+  #search {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Estilo para el botón de búsqueda */
+  #searchForm button {
+    padding: 10px 20px;
+    background-color: #fd79e5;
+    color: #0e0d0d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Estilo para el botón de búsqueda al pasar el mouse */
+  #searchForm button:hover {
+    background-color: #e8189c;
+  }
+  
+  /* Estilo para ocultar las ubicaciones que no coinciden con la búsqueda */
+  .location.hidden {
+    display: none;
+  }
+  
+  /*ESTILO PARA HACER MAS GRANDES LA IMAGEN*/
+  .container a img:hover {
+    transform: scale(1.1);
+  }
+ }
+
+ @media only screen and (max-width: 1800){
+      /*estilo para la pagina inicio*/
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f6f3f3;
+      }
+      header {
+        background-color: #d7b2d2;
+        color: #0b0b0b;
+        text-align:center;
+       /* display: flex;*/
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px; /* Ajustar el espacio alrededor de las imágenes */
+      
+      }
+      
+      header img {
+        width: 300px; /* Ajusta el ancho según el tamaño de tu logo */
+        height: auto; /* Esto mantiene la proporción del logo */
+      }
+      
+      nav {
+        background-color: #feeaf5;
+        padding: 20px;
+        text-align: center;
+      }
+      nav a {
+        color: #090909;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      nav a:hover {
+        text-decoration:none;
+      }
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    
+    nav ul li a {
+        color: #0b0b0b;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    
+    nav ul li a:hover {
+        color: #ff00bf; /* Color de resaltado al pasar el cursor */
+    }
+      main {
+      text-align: center end justify;
+        padding: 20px;
+      }
+  
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;  
+      }
+      .faq-item {
+        margin-bottom: 20px;
+      }
+      .question {
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .answer {
+        display: none;
+        margin-top: 10px;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .stars-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .destacado {
+        background-color: #fff;
+        border: 1px solid #0c0c0c;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      .destacado h2 {
+        color: #333;
+      }
+      .location {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      /*ESTILO reseña*/                       
+      
+      .place {
+        margin-bottom: 20px;
+      }
+      
+      .rating {
+        margin-bottom: 10px;
+      }
+      
+      .star {
+        font-size: 24px;
+        cursor: pointer;
+        color: rgb(42, 205, 61);
+      }
+      
+      .star.selected {
+        color: gold;
+      }
+      
+      .comment {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+      }
+      
+      .submit {
+        padding: 5px 10px;
+        background-color: #ed9bf3;
+        color: #0b0a0a;
+        border: none;
+        cursor: pointer;
+      }
+      
+      .comment-list div {
+        margin-bottom: 5px;
+      }
+  /*reseña*/
+  .place
+  {
+   color: #070707;
+  }
+  
+      /* Estilos de ejemplo para ocultar elementos */
+      .hidden {
+        display: none;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+       
+      /* Estilos básicos para la barra de búsqueda */
+      .search-container {
+        margin-bottom: 20px;
+        text-align: right;
+      }
+      .search-container input[type=text] {
+        padding: 10px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid #999898;
+        font-size: 16px;
+      }
+      .search-container button {
+        padding: 10px 20px;
+        background-color: #f8b7e0;
+        color: rgb(2, 2, 2);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .search-container button:hover {
+        background-color: #6e9dcc;
+      }
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        background-color: #f574e8;
+        color: rgb(12, 12, 12);
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #e889f0;
+      }
+  
+  /* estilo para la pagina de destinos*/
+  .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact-info {
+    width: 50%; /* Ajustar según sea necesario */
+  }
+  /*funcionalidad extra de opacidad y transicion en imagenes*/
+  .contact-info img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  .contact-info img:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  .contact-image {
+    width: 50%; /* Ajustar según sea necesario */
+    text-align: right;
+  }
+  .contact-image img {
+    max-width: 100%;
+    height: auto;
+  }
+   /* Estilos para el botón */
+  main button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #fa92e5;
+    background-color: #fdb7f2;
+    color: rgb(7, 7, 7);
+    margin: 10px 0;
+    display: block;
+    width: auto;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Estilo para cuando el botón se encuentra en estado hover (sobre) */
+  main button:hover {
+    background-color: #fad4f2;
+    color: #050505;
+  }
+  
+  /* Estilo para cuando el botón se encuentra en estado activo (presionado) */
+  main button:active {
+    background-color: #222;
+  }
+  
+  /*ESTILO PARA PONER EN TARJETAS EL INDEX*/
+  
+  .card {
+    display: inline-block;
+    width: 250px; /* Ancho deseado para cada tarjeta */
+    margin: 10px; /* Margen entre las tarjetas */
+    border: 1px solid #ccc; /* Borde para cada tarjeta */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra para efecto de elevación */
+    text-align: center; /* Centra el contenido */
+  }
+  
+  .card img {
+    width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+  
+  .card p {
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+  }
+  
+  
+  /* Clase CSS para resaltar el texto encontrado en la búsqueda */
+  .highlight {
+      background-color: rgb(246, 194, 243);
+  }
+  
+  /* Estilo para el formulario de búsqueda */
+  #searchForm {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  /* Estilo para el campo de búsqueda */
+  #search {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Estilo para el botón de búsqueda */
+  #searchForm button {
+    padding: 10px 20px;
+    background-color: #fd79e5;
+    color: #0e0d0d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Estilo para el botón de búsqueda al pasar el mouse */
+  #searchForm button:hover {
+    background-color: #e8189c;
+  }
+  
+  /* Estilo para ocultar las ubicaciones que no coinciden con la búsqueda */
+  .location.hidden {
+    display: none;
+  }
+  
+  /*ESTILO PARA HACER MAS GRANDES LA IMAGEN*/
+  .container a img:hover {
+    transform: scale(1.1);
+  }
+ }
+ 
